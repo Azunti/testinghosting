@@ -30,23 +30,4 @@
     <script type="text/javascript" src="js/logic.js"></script>
 
   </body>
-  <body>
-    <h1>Upload a .sql File</h1>
-    <input type="file" id="fileInput" accept=".sql">
-    <pre id="output"></pre>
-
-    <script>
-        document.getElementById('fileInput').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    // Display the content of the .sql file
-                    document.getElementById('output').textContent = e.target.result;
-                };
-                reader.readAsText(file);
-            }
-        });
-    </script>
-</body>
 </html>
